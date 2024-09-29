@@ -1,5 +1,5 @@
-import { parse } from "../src/parse.js";
-import { calc } from "../src/calc.js";
+import { parse } from "./parse.js";
+import { calc } from "./calc.js";
 
 function check(stringExpression, expectedResult) {
   calc(parse(stringExpression)) === expectedResult
