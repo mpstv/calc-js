@@ -1,0 +1,121 @@
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  font-size: 22px;
+  transition: all 0.2s linear;
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    --main-background: #ffb47b;
+    --calculator-background: #fff;
+    --calculator-color: #3a3a3a;
+    --button-border: #efefef;
+    --button-hover-background: #f2f2f2;
+    --button-active-background: #e2e7e7;
+    --special-button-background: #ff9a4c;
+    --special-button-hover-background: #ff882c;
+    --special-button-active-background: #fd760f;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --main-background: #ed9049;
+    --calculator-background: #3a3a3a;
+    --calculator-color: #fff;
+    --button-border: #dedede;
+    --button-hover-background: #2a2a2a;
+    --button-active-background: #171717;
+    --special-button-background: #ff9a4c;
+    --special-button-hover-background: #ff882c;
+    --special-button-active-background: #fd760f;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--main-background);
+  padding: 0;
+  margin: 0;
+}
+
+.calculator {
+  width: 300px;
+  height: 600px;
+  box-shadow: 10px 10px 32px 0px rgba(63, 63, 63, 0.25);
+  background-color: var(--calculator-background);
+}
+
+.display {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe flex-end;
+  gap: 20px;
+  padding: 10px;
+  text-align: right;
+  height: 50%;
+  overflow-y: auto;
+}
+
+.display p {
+  margin: 0;
+  color: var(--calculator-color);
+}
+
+.buttons {
+  box-sizing: border-box;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1px;
+  background-color: var(--button-border);
+  border-top: 1px solid var(--button-border);
+}
+
+.buttons > button {
+  border: none;
+  outline: none;
+  background-color: var(--calculator-background);
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--calculator-color);
+}
+
+.buttons > button:focus {
+  outline: solid 2px lightblue;
+  z-index: 1;
+}
+
+.buttons > button:hover {
+  background-color: var(--button-hover-background);
+}
+
+.buttons > button:active {
+  background-color: var(--button-active-background);
+}
+
+.buttons > button:nth-child(4n) {
+  background-color: var(--special-button-background);
+}
+
+.buttons > button:nth-child(4n):hover {
+  background-color: var(--special-button-hover-background);
+}
+
+.buttons > button:nth-child(4n):active {
+  background-color: var(--special-button-active-background);
+}
+
+@media (width <= 400px) {
+  .calculator {
+    width: 100%;
+    height: 100%;
+  }
+}
