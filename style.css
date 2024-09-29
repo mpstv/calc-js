@@ -3,7 +3,6 @@ html {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   height: 100%;
   font-size: 22px;
-  transition: all 0.2s linear;
 }
 
 @media (prefers-color-scheme: light) {
@@ -86,6 +85,7 @@ body {
   cursor: pointer;
   font-size: 22px;
   color: var(--calculator-color);
+  transition: all 0.2s linear;
 }
 
 .buttons > button:focus {
