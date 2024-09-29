@@ -4,12 +4,6 @@
 
 ## Description
 
-A simple javascript program that calculates a mathematical expression given by an input string.
+A program with nice ui that calculates a mathematical expression given by an input string.
 
-This program has no dependencies.
-
-## Run
-
-For run program simply execute the index.js file as follows:
-
-`node ./index.js`
+Writen in plain javscript, html and css with no depencies and build process
