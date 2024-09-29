@@ -6,7 +6,7 @@
 
 A program with nice ui that calculates a mathematical expression given by an input string.
 
-Writen in plain javscript, html and css with no depencies and build process
+Written in plain javascript, html and css with no dependencies and build process.
 
 ## Tests
 
